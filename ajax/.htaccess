@@ -1,0 +1,27 @@
+# Helicon Ape version 3.1.0.115
+
+RewriteEngine On
+RewriteRule ^administrator$ administrator/ [L]
+RewriteRule ^administrator/$ administrator/ [L]
+
+RewriteRule ^thumb/([0-9]+)x([0-9]+)/([0-9]+)/(.*)$ timthumb.php?w=$1&h=$2&zc=$3&q=100&src=http://%{HTTP_HOST}/kythuathonghai/$4  [L]
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&idl=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&idc=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&idi=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&ids=$5 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&idl=$2&page=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&idc=$3&page=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&idi=$4&page=$5 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)&page=([0-9]+)$ index.php?com=$1&ids=$5&page=$6 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+).html$	index.php?com=$1 [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&page=([0-9]+)$	index.php?com=$1&page=$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+).html&keywords=(.*)$	index.php?com=$1&keywords=$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).htm$ index.php?com=$1&lang=$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&id=$2 [L]
